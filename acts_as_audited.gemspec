@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{acts_as_audited}
-  s.version = "2.0.0.rc5"
+  s.version = "2.0.0.rc6"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brandon Keepers", "Kenneth Kalmer"]
-  s.date = %q{2011-02-08}
+  s.date = %q{2011-02-10}
   s.email = %q{brandon@opensoul.org}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -66,7 +66,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/collectiveidea/acts_as_audited}
   s.rdoc_options = ["--main", "README.rdoc", "--line-numbers", "--inline-source"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.0}
   s.summary = %q{ActiveRecord extension that logs all changes to your models in an audits table}
   s.test_files = [
     "spec/acts_as_audited_spec.rb",
@@ -96,28 +96,27 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rails>, ["= 3.0.3"])
+      s.add_runtime_dependency(%q<rails>, ["~> 3.0"])
       s.add_development_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_development_dependency(%q<rspec-rails>, ["~> 2.4.0"])
+      s.add_development_dependency(%q<rspec-rails>, [">= 2.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
     else
-      s.add_dependency(%q<rails>, ["= 3.0.3"])
+      s.add_dependency(%q<rails>, ["~> 3.0"])
       s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-      s.add_dependency(%q<rspec-rails>, ["~> 2.4.0"])
+      s.add_dependency(%q<rspec-rails>, [">= 2.4"])
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<yard>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rails>, ["= 3.0.3"])
+    s.add_dependency(%q<rails>, ["~> 3.0"])
     s.add_dependency(%q<sqlite3-ruby>, [">= 0"])
-    s.add_dependency(%q<rspec-rails>, ["~> 2.4.0"])
+    s.add_dependency(%q<rspec-rails>, [">= 2.4"])
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<yard>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
